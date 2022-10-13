@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*texto sobre las imagenes del carrusel*/
+.texto_imagen_carrusel{
+    padding-top: 450px;
+    margin-right: 8em;
+    color: white;
+    float: right;
+    margin-top: -58vw;
+    position: relative;
+    z-index: 1000;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: right;
+   
+}
+
+
+/*D honolulu izq texto derecha*/
+.imagen_texto_section{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    background-color: rgb(148, 146, 146);
+    
+    
+}
+/*imagen honolulu*/
+.div_imagen_section{
+    width: 850px;
+    height: 400px;
+    background-image: url(fotos/honolulu.jpg);
+    background-size: cover;
+}
+/*texto derecha honolulu*/
+.div_texto_section{
+    
+    width: 50%;
+    height: 30em;
+    text-align: right;
+    color: white
+
+    
+}
+#conoce_mas{
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.lugar{
+    padding: 20px;
+    color: white;
+}    
+  
+.se_orador {
+    
+    width: 50%;
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+.oradores{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+form{
+    display: block;
+}
+
+#boton_enviar{
+    width: 100%;
+    margin-left: 1%;
+    border: 0;
+    background-color: #57a404;
+}
+#titulo_charla{
+    text-align: left;
+}
+footer{
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: center;
+    align-items: normal;
+    background: linear-gradient( 90deg, #02395e,rgb(89, 164, 215));
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content:normal;
+    align-items: normal;
+
+}
+footer a{
+    color: white;
+    padding: 0 2em;
+}
