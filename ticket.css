@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*.lugar{
+    padding: 20px;
+    color: white;
+}*/
+#descuentos {
+    
+    width: 60%;
+    margin: 0 auto 2em;
+    text-align: center;
+}    
+  
+
+.ticket {
+    
+    width: 60%;
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+
+.descuentos{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.form{
+    display: block;
+}
+
+#borrar{
+    width: 100%;
+    margin-left: 1%;
+    border: 0;
+    background-color: #57a404;
+}
+#calcular{
+    width: 100%;
+    margin-left: 1%;
+    border: 0;
+    background-color: #57a404;
+}    
+
+/*------------------------------------------no tocar------------------------------------------*/
+
+footer{
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: center;
+    align-items: normal;
+    background: linear-gradient( 90deg, #02395e,rgb(89, 164, 215));
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content:normal;
+    align-items: normal;
+
+}
+footer a{
+    color: white;
+    padding: 0 2em;
+}
