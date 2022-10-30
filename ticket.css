@@ -10,7 +10,7 @@
 }*/
 #descuentos {
     
-    width: 60%;
+    width: 50%;
     margin: 0 auto 2em;
     text-align: center;
 }    
@@ -18,7 +18,7 @@
 
 .ticket {
     
-    width: 60%;
+    width: 50%;
     margin: 0 auto 2em;
     text-align: center;
 }
@@ -33,6 +33,7 @@
 .form{
     display: block;
 }
+
 
 #borrar{
     width: 100%;
