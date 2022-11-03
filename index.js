@@ -13,8 +13,8 @@ let totalaPagar = document.getElementById(`totalPagar`);
 
 
 function reset(){
-    cantidadEntradas.value="";
-    totalaPagar.innerHTML = "Total a pagar $";
+    //cantidadEntradas.value="";
+    document.getElementById(`totalaPagar`).innerHTML = "Total a pagar $";
 }
 
 function resumen(){
@@ -24,15 +24,15 @@ function resumen(){
     if(categoria.value=="estudiante"){
         
         precioPagar=(cantidadEntradas.value*(200-(200*0.8)));
-        totalaPagar.innerHTML = precioPagar;
+        totalaPagar.textContent = "Total a pagar $: " + precioPagar;
     }else if(categoria.value=="trainee"){
         
         precioPagar=(cantidadEntradas.value*(200-(200*0.5)));
-        totalaPagar.innerHTML = precioPagar;
+        totalaPagar.textContent = "Total a pagar $: " + precioPagar;
     }else if(categoria.value=="junior"){
         
         precioPagar=(cantidadEntradas.value*(200-(200*0.15)));
-        totalaPagar.innerHTML = precioPagar;
+        totalaPagar.textContent = "Total a pagar $:" + precioPagar;
     }
 
     //console.log(cantidadEntradas.value);

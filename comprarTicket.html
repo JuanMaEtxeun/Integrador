@@ -64,7 +64,7 @@
               </div>
         </section>
 
-          <div class="container" id="descuentos">
+          <div class="containerCard" id="descuentos">
             <div class="row" id="descuento-1">
 
               <div class="col-4">
@@ -122,12 +122,12 @@
 
           <form class="row"> <!--row 1 nombre y apellido-->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-6">
                 <label for="inputEmail4" class="form-label"></label>
                 <input type="text" class="form-control" placeholder="Nombre" id="inputEmail4">
               </div>
 
-              <div class="col-md-6">
+              <div class="col-6">
                 <label for="inputPassword4" class="form-label"></label>
                 <input type="text" class="form-control" placeholder="Apellido" id="inputPassword4">
               </div>
@@ -135,17 +135,17 @@
 
        <!--**************************** Hasta aca primera fila(nombre Apellido)*********************-->     
             <div class="row">  <!--row 2 correo-->
-              <div class="col-12 md-12">
+              <div class="col-12">
                 <label for="inputPassword4" class="form-label"></label>
                 <input type="text" class="form-control" placeholder="Correo" id="correo">
               </div>
             </div>   
             
 <!--**************************** Hasta aca segund fila (correo)*********************--> 
-            <div class="row"> <!--row 3 cantidad y categoria-->
+            <div class="row mt-3"> <!--row 3 cantidad y categoria-->
               <div class="col-6">
-                <label for="">Cantidad</label>
-                <input id="cantidad" type="text" class="form-control" placeholder="Cantidad" >
+                <label id="labelCantidad" for="">Cantidad</label>
+                <input id="cantidad" type="number" min="0" max="3" class="form-control" placeholder="Cantidad" >
               </div>
 
               <div class="col-6">
@@ -164,22 +164,21 @@
                 <div id="totalPagar" class="alert alert-primary" role="alert">Total a pagar $</div>
               </div>
             </div>
-          </form>  
+
+            
+          
   <!--**************************** Hasta aca cuarta fila(total a pagar)*********************-->          
-            <div class="row mt-3"><!--row 5 borrar y resumen -->
+            <div class="row mt-3" id="botones"><!--row 5 borrar y resumen -->
+            
               <div class="col">
-                <button id="borrar" input type="reset" onclick="reset()"  class="btn">Borrar</button>
+                <button id="borrar" type="reset"  class="btn">Borrar</button>
               </div>
           
               <div class="col">
-                <button id="calcular" type="boton" onclick="resumen()" class="btn">Resumen</button>
+                <button id="calcular" type="button" onclick="resumen()" class="btn">Resumen</button>
               </div>
-            </div> 
-        
-              
-            
-            
-            
+            </div>
+          </form>  
         </div>
       </section>
 

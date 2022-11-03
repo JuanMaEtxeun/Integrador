@@ -9,19 +9,23 @@
     color: white;
 }*/
 #descuentos {
-    
-    width: 50%;
-    margin: 0 auto 2em;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     text-align: center;
+    
 }    
-  
+
 
 .ticket {
     
-    width: 50%;
+    width: 52%;
     margin: 0 auto 2em;
     text-align: center;
+    
 }
+
 
 
 .descuentos{
@@ -33,19 +37,27 @@
 .form{
     display: block;
 }
-
+.col-6{
+    text-align: left;
+}
+.row{
+    justify-content: center;
+}
+#totalPagar{
+    text-align: left;
+}
 
 #borrar{
-    width: 100%;
-    margin-left: 1%;
-    border: 0;
+    width: 92%;
+    
     background-color: #57a404;
+    
 }
 #calcular{
-    width: 100%;
-    margin-left: 1%;
-    border: 0;
+    width: 92%;
+    
     background-color: #57a404;
+    
 }    
 
 /*------------------------------------------no tocar------------------------------------------*/

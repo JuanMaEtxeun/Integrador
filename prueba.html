@@ -1,0 +1,70 @@
+<div id="form" class="mx-auto" style="width: 55rem;">
+    <form class="form">
+        <div class="row">
+            <div class="col p-2">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+            </div>
+            <div class="col p-2">
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-2">
+                <input type="email" class="form-control" placeholder="Correo" aria-label="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-2">
+                <label class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="Last name" min="1" pattern="[1-9]{0}">
+            </div>
+            <div class="col p-2">
+                <label class="form-label">Categoría</label>
+                <select class="form-select" id="categoria" aria-label="categoria">
+                    <!-- <option selected>Elegir</option> -->
+                    <option value="0.8">Estudiante</option>
+                    <option value="0.5">Trainee</option>
+                    <option value="0.15">Junior</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-2">
+                <div class="d-flex form-control bg-primary p-2 text-dark bg-opacity-25">
+                    <div>Total a pagar: $</div>
+                    <div id="total"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-2">
+                <button style="width: 27.6rem;" class="btn btn-green " type="reset" id="reset">Borrar</button>
+                <button style="width: 27.6rem;" class="btn btn-green " type="button" id="resumen">Resumen</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row mt-3" id="botones"><!--row 5 borrar y resumen -->
+            
+    <div class="col">
+      <button id="borrar" input type="reset" onclick="reset()"  class="btn">Borrar</button>
+    </div>
+
+    <div class="col">
+      <button id="calcular" type="boton" onclick="resumen()" class="btn">Resumen</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="row mt-3" id="botones"><!--row 5 borrar y resumen -->
+            
+    <div class="col">
+      <button id="borrar" input type="reset" onclick="reset()"  class="btn">Borrar</button>
+    </div>
+
+    <div class="col">
+      <button id="calcular" type="button" onclick="resumen()" class="btn">Resumen</button>
+    </div>
+  </div>
+</form> 
