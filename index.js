@@ -11,10 +11,11 @@ let botonCalcular = document.getElementById(`calcular`);
 let totalaPagar = document.getElementById(`totalPagar`);
 //console.log(document.getElementById(`totalPagar`));
 
+const PRECIO = 200;
 
-function reset(){
+function borrado(){
     //cantidadEntradas.value="";
-    document.getElementById(`totalaPagar`).innerHTML = "Total a pagar $";
+    totalaPagar.innerHTML = "Total a pagar $";
 }
 
 function resumen(){
@@ -23,15 +24,15 @@ function resumen(){
  
     if(categoria.value=="estudiante"){
         
-        precioPagar=(cantidadEntradas.value*(200-(200*0.8)));
+        precioPagar=(cantidadEntradas.value*(PRECIO-(PRECIO*0.8)));
         totalaPagar.textContent = "Total a pagar $: " + precioPagar;
     }else if(categoria.value=="trainee"){
         
-        precioPagar=(cantidadEntradas.value*(200-(200*0.5)));
+        precioPagar=(cantidadEntradas.value*(PRECIO-(PRECIO*0.5)));
         totalaPagar.textContent = "Total a pagar $: " + precioPagar;
     }else if(categoria.value=="junior"){
         
-        precioPagar=(cantidadEntradas.value*(200-(200*0.15)));
+        precioPagar=(cantidadEntradas.value*(PRECIO-(PRECIO*0.15)));
         totalaPagar.textContent = "Total a pagar $:" + precioPagar;
     }
 
