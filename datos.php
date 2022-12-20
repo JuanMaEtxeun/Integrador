@@ -22,15 +22,6 @@ $correo = $_POST['correo_reg'];
 $dni = $_POST['dni_reg'];
 $password = $_POST['password_reg'];
 
-
-echo $nombre;
-
-echo $apellido;
-echo $correo;
-echo $dni;
-echo $password;
-
-
 // cargar datos en la bb dd
 
 

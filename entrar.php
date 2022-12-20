@@ -14,20 +14,20 @@ if(mysqli_connect_errno()){
 
     echo"";
 }
-echo "viene de entrar htm";
+
 
 $correo_entrar = $_POST['correo_login'];
 $password_entrar = $_POST['password_login'];
 
-$query_login = "SELECT*FROM usuarios WHERE correo = $correo_entrar and password = $password_entrar";
-echo $query_login;
+$consul = "SELECT*FROM usuarios WHERE correo = '$correo_entrar' and password = '$password_entrar'";
 
-$consul = mysqli_query($conexion,$query_login);
 
-if($consul==$correo_entrar){
-    echo "Bienvenido";
+$resultado = mysqli_query($conexion,$consul);
+
+if(mysqli_num_rows($resultado)==1){
+    
 }else{
-    echo"Debe registrarse";
+    header("location:registrar.html");
 }
 
 
@@ -79,7 +79,9 @@ if($consul==$correo_entrar){
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">
-                    Conf. Bs As
+                    Bienvenido <?php
+                    echo $correo_entrar;
+                    ?>
                     </a>
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                       <div class="container-fluid">
@@ -111,7 +113,19 @@ if($consul==$correo_entrar){
             </nav>
       </header>  
 
-                  
+      <div class="row mt-4" id="botones"><!--row 5 borrar y resumen -->
+            
+              <div class="col-5">
+                <button id="borrar" type="submit"  class="btn">Editar</button>
+              </div>
+            </form>  
+          
+              <div class="col-5">
+                <a  href="registrar.html">
+                <button id="calcular" type="button" class="btn">Eliminar</button>
+                </a>
+              </div>
+            </div>          
     
 
     <main>
@@ -151,6 +165,8 @@ if($consul==$correo_entrar){
 </tbody>
 </table>
     </div>
+    
+    
     </main>  
 
    
