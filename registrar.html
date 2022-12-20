@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="Stylesheet" href="ticket.css">
 
-    <title>comprarTicket</title>
+    <title>Registrarse</title>
 
   </head>
 
@@ -55,53 +55,7 @@
     
 
     <main>
-      <!--***********************************descuentos*****************************-->
-      <div class="descuentos" id="Los_descuentos">
-        
-        <section>
-            <div class="descuentos" id="Los_descuentos">
-                <h1>DESCUENTOS</h1>
-              </div>
-        </section>
 
-          <div class="containerCard" id="descuentos">
-            <div class="row" id="descuento-1">
-
-              <div class="col-4">
-                <div class="card text-center border-primary"  style="width: 13rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">ESTUDIANTES</h5>
-                    <p class="card-text">Tiene un descuento</p>
-                    <h6 class="card-subtitle mb-2 text-muted">80%</h6>
-                    <p class="card-text">*presentar documentación</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-4" id="descuento-2">
-                <div class="card text-center border-success"  style="width: 13rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">TRAINEER</h5>
-                    <p class="card-text">Tiene un descuento</p>
-                    <h6 class="card-subtitle mb-2 text-muted">50%</h6>
-                    <p class="card-text">*presentar documentación</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-4" id="descuento-3">
-                <div class="card text-center border-warning"  style="width: 13rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">JUNIOR</h5>
-                    <p class="card-text">Tiene un descuento</p>
-                    <h6 class="card-subtitle mb-2 text-muted">15%</h6>
-                    <p class="card-text">*presentar documentación</p>
-                  </div>
-                </div>
-              </div>
-              
-             </div><!--fin row-->
-          </div><!--fin container-->
     </main>  
     
     <!--*******************************fin descuentos***********************-->   
@@ -114,69 +68,61 @@
             <div class="row g-3 mt-3">
 
               <div class="valor" id="valor_ticket">
-                <P>venta</P>
-                <h1 id="orador">VALOR DEL TICKET $ 200</h1>
+                
+                <h1 id="orador">REGISTRARSE</h1>
                 
               </div>
             </div>
 
-          <form class="row"> <!--row 1 nombre y apellido-->
+          <form action="datos.php" method="post" class="row" > <!--row 1 nombre y apellido-->
             <div class="row">
-              <div class="col-6">
+              <div class="col-5">
                 <label for="inputEmail4" class="form-label"></label>
-                <input type="text" class="form-control" placeholder="Nombre" id="inputEmail4">
+                <input type="text" class="form-control" placeholder="Nombre" name="nombre_reg" id="inputEmail4" required>
               </div>
 
-              <div class="col-6">
+              <div class="col-5">
                 <label for="inputPassword4" class="form-label"></label>
-                <input type="text" class="form-control" placeholder="Apellido" id="inputPassword4">
+                <input type="text" class="form-control" placeholder="Apellido" name="apellido_reg" id="inputPassword4" required>
               </div>
             </div>
 
        <!--**************************** Hasta aca primera fila(nombre Apellido)*********************-->     
             <div class="row">  <!--row 2 correo-->
-              <div class="col-12">
+              <div class="col-5">
                 <label for="inputPassword4" class="form-label"></label>
-                <input type="text" class="form-control" placeholder="Correo" id="correo">
+                <input type="email" class="form-control" placeholder="Correo" name="correo_reg" id="correo" required>
               </div>
-            </div>   
-            
-<!--**************************** Hasta aca segund fila (correo)*********************--> 
-            <div class="row mt-3"> <!--row 3 cantidad y categoria-->
-              <div class="col-6">
-                <label id="labelCantidad" for="">Cantidad</label>
-                <input id="cantidad" type="number" min="0" max="3" class="form-control" placeholder="Cantidad" >
-              </div>
-
-              <div class="col-6">
-                <label id="labelCategoria" for="">Categoria</label>
-                <select class="form-control" id="categoria">
-                  <option selected value="estudiante">Estudiante</option>
-                  <option value="trainee">Trainee</option>
-                  <option value="junior">Junior</option>
-                </select>
-              </div>
-            </div> 
-
-   <!--**************************** Hasta aca tercer fila(cantidad categoria)*********************-->          
-            <div class="row mt-3">  <!--row 4 total a pagar-->
-              <div class="col-12">
-                <div id="totalPagar" class="alert alert-primary" role="alert">Total a pagar $</div>
+              <div class="col-5">
+                <label for="inputPassword4" class="form-label"></label>
+                <input type="number" class="form-control" placeholder="Dni" name="dni_reg" id="dni" maxlength="8" required>
               </div>
             </div>
+            
+            <div class="row">  <!--row 2 correo-->
+              <div class="col-10">
+                <label for="inputPassword4" class="form-label"></label>
+                <input type="password" class="form-control" placeholder="Password" name="password_reg" id="clave" minlength="6" required>
+              </div>
+              
+            </div>   
+  
+
+   
 
             
           
-  <!--**************************** Hasta aca cuarta fila(total a pagar)*********************-->          
+  <!--**************************** boton enviar borrar eliminar editar*********************-->          
             <div class="row mt-3" id="botones"><!--row 5 borrar y resumen -->
             
-              <div class="col">
-                <button id="borrar" type="reset" onclick="borrado()" class="btn">Borrar</button>
+              <div class="col-5">
+                <button id="borrar" type="reset"  class="btn">Borrar</button>
               </div>
           
-              <div class="col">
-                <button id="calcular" type="button" onclick="resumen()" class="btn">Resumen</button>
+              <div class="col-5">
+                <button id="calcular" type="submit"  class="btn">Enviar</button>
               </div>
+              
             </div>
           </form>  
         </div>
