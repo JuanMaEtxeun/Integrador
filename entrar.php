@@ -4,20 +4,13 @@
 
 //conexion bbdd
 
-$conexion = mysqli_connect("localhost","root","","bsasconferencia");
-
-if(mysqli_connect_errno()){
-
-    echo "Error en la conexión"; // puede ir un alert
-
-}else{
-
-    echo"";
-}
+require "conexion.php";
 
 
 $correo_entrar = $_POST['correo_login'];
 $password_entrar = $_POST['password_login'];
+
+
 
 $consul = "SELECT*FROM usuarios WHERE correo = '$correo_entrar' and password = '$password_entrar'";
 
@@ -25,8 +18,10 @@ $consul = "SELECT*FROM usuarios WHERE correo = '$correo_entrar' and password = '
 $resultado = mysqli_query($conexion,$consul);
 
 if(mysqli_num_rows($resultado)==1){
-    
+
+  
 }else{
+    
     header("location:registrar.html");
 }
 
@@ -80,7 +75,11 @@ if(mysqli_num_rows($resultado)==1){
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">
                     Bienvenido <?php
-                    echo $correo_entrar;
+                    if(isset($_POST['correo_login']) && isset($_POST['password_login'])){
+                      echo $correo_entrar; 
+                    }else{
+                      echo"debe registrarse";
+                    }
                     ?>
                     </a>
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -113,15 +112,17 @@ if(mysqli_num_rows($resultado)==1){
             </nav>
       </header>  
 
-      <div class="row mt-4" id="botones"><!--row 5 borrar y resumen -->
+      <div class="row mt-3" id="botones"><!--row 5 editar eliminar-->
             
               <div class="col-5">
-                <button id="borrar" type="submit"  class="btn">Editar</button>
+              <a  href="editar.html">
+                <button id="borrar" type="button"  class="btn">Editar</button>
+              </a>  
               </div>
-            </form>  
+            
           
               <div class="col-5">
-                <a  href="registrar.html">
+                <a  href="eliminar.html">
                 <button id="calcular" type="button" class="btn">Eliminar</button>
                 </a>
               </div>

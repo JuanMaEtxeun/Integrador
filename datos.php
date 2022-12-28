@@ -1,20 +1,11 @@
-/*<?php
+<?php
  
 
 
 //conexion bbdd
 
-$conexion = mysqli_connect("localhost","root","","bsasconferencia");
+require "conexion.php";
 
-if(mysqli_connect_errno()){
-
-    echo "Error en la conexión"; // puede ir un alert
-
-}else{
-
-    echo"";
-}
-echo "viene de registrarse";
 
 $nombre = $_POST['nombre_reg'];
 $apellido = $_POST['apellido_reg'];
@@ -25,11 +16,15 @@ $password = $_POST['password_reg'];
 // cargar datos en la bb dd
 
 
-$queryInsertar ="INSERT INTO usuarios VALUES('','$nombre','$apellido','$correo','$dni','$password')";
-$insert = mysqli_query($conexion,$queryInsertar);
+///Consulta nueva
+$queryInsertar = "INSERT INTO `usuarios` (`nombre`, `apellido`, `correo`, `dni`, `password`) VALUES ('$nombre', '$apellido', '$correo', $dni, '$password')";
 
-if(!$queryInsertar){
-  echo "Ha ocurrido un error al insertar datos: ". mysqli_error(($conexion));
+//Consulta vieja
+//$queryInsertar = "INSERT INTO usuarios VALUES('$nombre','$apellido','$correo',$dni,'$password')";
+
+if (!$result = mysqli_query($conexion, $queryInsertar)) {
+    echo "Ha ocurrido un error al insertar datos: ". mysqli_error(($conexion));
+  
 }
 
 $consultas = mysqli_query($conexion,"SELECT*FROM usuarios");
@@ -95,12 +90,25 @@ $consultas = mysqli_query($conexion,"SELECT*FROM usuarios");
 
                 </div>
             </nav>
-      </header>  
+      </header> 
 
-                  
-    
+ <main>
 
-    <main>
+ <div class="row mt-3" id="botones"><!--row 5 editar eliminar-->
+            
+            <div class="col-5">
+            <a  href="editar.html">
+              <button id="borrar" type="button"  class="btn">Editar</button>
+            </a>  
+            </div>
+          
+        
+            <div class="col-5">
+              <a  href="eliminar.html">
+              <button id="calcular" type="button" class="btn">Eliminar</button>
+              </a>
+            </div>
+          </div>         
      
     <div class = "container">
     <table class="table">
